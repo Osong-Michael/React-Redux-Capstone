@@ -15,7 +15,7 @@ const Pokemon = ({ pokemons, handleClick }) => {
       <p>{pokemon.name}</p>
       <img src={Pokeball} alt="pokemon ball" />
       <div className={app.pokeBtn}>
-        <button onClick={() => handleClick(pokemon)} type="button">Details</button>
+        <button onClick={() => handleClick(pokemon)} type="button">Open Pokemon</button>
       </div>
     </div>
   ));

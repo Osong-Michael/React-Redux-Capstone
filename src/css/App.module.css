@@ -16,6 +16,7 @@
   position: relative;
   overflow: hidden;
   font-family: 'Lobster', cursive;
+  text-transform: uppercase;
 }
 
 .poke p {
@@ -32,11 +33,11 @@
 }
 
 .pokeBtn {
-  text-align: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .pokeBtn button {
-  /* margin-left: 138px; */
   outline: none;
   padding: 7px;
   background: #e81c45;
@@ -44,4 +45,5 @@
   border: 1px solid #e81c45;
   border-radius: 5px;
   color: antiquewhite;
+  margin-top: 15px;
 }
