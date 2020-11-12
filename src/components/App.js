@@ -1,10 +1,11 @@
 import React from 'react';
+import Pokemons from '../container/Pokemons';
 
 function App() {
   return (
-    <div>
-      <h1>Hello Poke</h1>
-    </div>
+    <>
+      <Pokemons />
+    </>
   );
 }
 
