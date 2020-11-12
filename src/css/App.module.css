@@ -1,18 +1,21 @@
 .pokeBody {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 80%;
   margin: 20px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 10px;
-  position: relative;
+  grid-row-gap: 20px;
   overflow: hidden;
 }
 
 .poke {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   padding: 10px;
   height: 150px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Lobster', cursive;
 }
 
 .poke p {
@@ -24,5 +27,21 @@
 .poke img {
   position: absolute;
   top: 0;
+  left: 90px;
   opacity: 0.2;
+}
+
+.pokeBtn {
+  text-align: center;
+}
+
+.pokeBtn button {
+  /* margin-left: 138px; */
+  outline: none;
+  padding: 7px;
+  background: #e81c45;
+  cursor: pointer;
+  border: 1px solid #e81c45;
+  border-radius: 5px;
+  color: antiquewhite;
 }

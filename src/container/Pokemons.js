@@ -1,25 +1,41 @@
+/* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
 import Pokemon from '../components/Pokemon';
 import app from '../css/App.module.css';
 
+const apiUrl = 'https://pokeapi.co/api/v2/pokemon';
 class Pokemons extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      pokemons: [
-        { name: 'Pikachu', id: 1, color: 'yellow' },
-        { name: 'Snorlax', id: 2, color: 'blue' },
-        { name: 'Charmander', id: 3, color: 'orange' },
-      ],
+      pokemons: [],
     };
+  }
+
+  componentDidMount() {
+    this.getPoke();
+  }
+
+  getPoke() {
+    fetch(apiUrl)
+      .then(res => res.json())
+      .then(resItems => {
+        this.setState({
+          pokemons: resItems.results,
+        });
+      });
+  }
+
+  handleClick(pokemon) {
+    console.log(pokemon);
   }
 
   render() {
     const { pokemons } = this.state;
     return (
       <div className={app.pokeBody}>
-        <Pokemon pokemons={pokemons} />
+        <Pokemon pokemons={pokemons} handleClick={this.handleClick} />
       </div>
     );
   }
