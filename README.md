@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# React and Redux App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Calculator application built with React.
 
-## Available Scripts
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-In the project directory, you can run:
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/OA7/React-Redux-Capstone">
+    <img src="public/pokeball_PNG4.png" alt="Logo" width="150" height="150">
+  </a>
 
-### `yarn start`
+  <h1 align="center">My Poke</h1>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <p align="center">
+    <a href=""><strong>View Demo</strong></a>
+    ·
+    <a href="https://github.com/OA7/React-Redux-Capstone/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/OA7/React-Redux-Capstone/issues">Request Feature</a>
+  </p>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-### `yarn test`
+* [About the Project](#about-the-project)
+* [Use Locally](#local-usage)
+  * [Built With](#built-with)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+* [License](#license)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
+<br>
+<!-- ABOUT THE PROJECT -->
 
-### `yarn build`
+## About The Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A simle catalaogue for your favourite pokemons.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Product Name Screen Shot][product-screenshot]
+<br>
+<br>
+<!-- ![Product Name Screen Shot][product-screenshot2] -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- ABOUT THE PROJECT -->
+## Local Usage
 
-### `yarn eject`
+To use this app locally, this is what you need to:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* [Download](https://github.com/OA7/React-Redux-Capstone/archive/master.zip) or clone this repo:
+  - Clone with SSH:
+  ```
+    git@github.com:OA7/React-Redux-Capstone.git
+  ```
+  - Clone with HTTPS
+  ```
+    https://github.com/OA7/React-Redux-Capstone.git
+  ```
+* `cd` into the downloaded folder and run `npm install`
+* then, run `npm start`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built With
+This project was built using these technologies.
+* ReactJS
+* JavaScript
+* Webpack
+* Babel
+* Redux
+* prop-types library
+* CSS
+* Chrome Dev Tools
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<!-- CONTACT -->
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contact
 
-## Learn More
+👤 **Osong Agberndifor**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Github: [OA7](https://github.com/OA7)
+- Twitter: [@Osong17](https://twitter.com/Osong17)
+- Linkedin: [Osong](https://linkedin.com/osong-agberndifor)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Microverse](https://www.microverse.org/)
+* [Marc-Antoine Roy](https://www.behance.net/enfantroy) - Original Designer of App UI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/OA7/React-Redux-Capstone.svg?style=flat-square
+[contributors-url]: https://github.com/OA7/React-Redux-Capstone/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/OA7/React-Redux-Capstone.svg?style=flat-square
+[forks-url]: https://github.com/OA7/React-Redux-Capstone/network/members
+[stars-shield]: https://img.shields.io/github/stars/OA7/React-Redux-Capstone.svg?style=flat-square
+[stars-url]: https://github.com/OA7/React-Redux-Capstone/stargazers
+[issues-shield]: https://img.shields.io/github/issues/OA7/React-Redux-Capstone.svg?style=flat-square
+[issues-url]: https://github.com/OA7/React-Redux-Capstone/issues
+[product-screenshot]: public/screen.png
+<!-- [product-screenshot2]: dist/images/page2.png -->
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📝 License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [Creative Common](https://creativecommons.org/licenses/by-nc/4.0/) licensed.
