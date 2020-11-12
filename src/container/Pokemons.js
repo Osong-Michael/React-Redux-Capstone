@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Pokemon from '../components/Pokemon';
+import app from '../css/App.module.css';
 
 class Pokemons extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class Pokemons extends Component {
   render() {
     const { pokemons } = this.state;
     return (
-      <div>
+      <div className={app.pokeBody}>
         <Pokemon pokemons={pokemons} />
       </div>
     );

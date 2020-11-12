@@ -1,0 +1,28 @@
+.pokeBody {
+  border: 1px solid black;
+  width: 80%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.poke {
+  border: 1px solid blue;
+  padding: 10px;
+  height: 150px;
+}
+
+.poke p {
+  text-align: center;
+  padding-top: 40px;
+  font-size: 20px;
+}
+
+.poke img {
+  position: absolute;
+  top: 0;
+  opacity: 0.2;
+}

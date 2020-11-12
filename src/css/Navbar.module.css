@@ -1,0 +1,11 @@
+.navbar {
+  border: 1px solid red;
+  padding: 10px;
+  font-family: 'Lobster', cursive;
+  background-color: #e81c45;
+}
+
+.navbar h1 {
+  font-size: 56px;
+  color: white;
+}
