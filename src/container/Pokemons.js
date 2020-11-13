@@ -27,15 +27,11 @@ class Pokemons extends Component {
       });
   }
 
-  handleClick(pokemon) {
-    console.log(pokemon);
-  }
-
   render() {
     const { pokemons } = this.state;
     return (
       <div className={app.pokeBody}>
-        <Pokemon pokemons={pokemons} handleClick={this.handleClick} />
+        <Pokemon pokemons={pokemons} />
       </div>
     );
   }
