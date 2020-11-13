@@ -1,6 +1,62 @@
 .container {
-  border: 1px solid blue;
+  border: 1px solid #f8b7c4;
+  border-radius: 10px;
   width: 65%;
   margin: 40px auto;
-  padding: 5px;
+  padding: 15px;
+  box-shadow: 12px 12px 2px 1px rgba(152, 152, 248, 0.2);
+}
+
+.image {
+  /* border: 1px solid blue; */
+  height: 200px;
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 200px;
+  height: 200px;
+}
+
+.name {
+  /* border: 1px solid blue; */
+  text-align: center;
+}
+
+.height {
+  /* border: 1px solid blue; */
+  text-align: center;
+}
+
+.abilities {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-around;
+}
+
+span {
+  text-transform: uppercase;
+  padding-left: 4px;
+  font-family: 'Lobster', cursive;
+  color: rgb(233, 101, 40);
+}
+
+.back {
+  /* border: 1px solid blue; */
+  width: 10%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.back a {
+  color: rgb(233, 101, 40);
+  text-decoration: none;
+}
+
+.back a:hover {
+  text-decoration: underline;
 }
