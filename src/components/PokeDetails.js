@@ -59,10 +59,6 @@ class PokeDetails extends Component {
               ABILITY:
               <span>{poke.abilities && poke.abilities[0].ability.name}</span>
             </p>
-            <p>
-              ABILITY:
-              <span>{poke.abilities && poke.abilities[1].ability.name}</span>
-            </p>
           </div>
         </div>
         <div className={details.back}><Link to="/">All Pokemons</Link></div>
