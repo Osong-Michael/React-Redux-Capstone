@@ -4,41 +4,49 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import details from '../css/Details.module.css';
+import { fetchPokemon } from '../actions/index';
+import { getOnePokemon } from '../reducers/pokeReducer';
 
-const apiUrl = 'https://pokeapi.co/api/v2/pokemon';
+// const apiUrl = 'https://pokeapi.co/api/v2/pokemon';
 class PokeDetails extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-    };
-  }
+  //   this.state = {
+  //   };
+  // }
 
   componentDidMount() {
-    this.getDetails();
-  }
-
-  getDetails() {
+    // this.getDetails();
+    const { fetchPokemon } = this.props;
     this.name = this.props.match.params.name;
-    fetch(`${apiUrl}/${this.name}`)
-      .then(res => res.json())
-      .then(resItems => {
-        this.show(resItems);
-      });
+    fetchPokemon(this.name);
   }
 
-  show(items) {
-    this.itemx = items;
-    // console.log(this.itemx);
-    this.setState({
-      ...this.itemx,
-    });
-    // console.log(this.state);
-  }
+  // getDetails() {
+  //   this.name = this.props.match.params.name;
+  //   fetch(`${apiUrl}/${this.name}`)
+  //     .then(res => res.json())
+  //     .then(resItems => {
+  //       this.show(resItems);
+  //     });
+  // }
+
+  // show(items) {
+  //   this.itemx = items;
+  //   // console.log(this.itemx);
+  //   this.setState({
+  //     ...this.itemx,
+  //   });
+  //   // console.log(this.state);
+  // }
 
   render() {
-    const poke = this.state;
+    const poke = this.props.pokemon;
+    // console.log('My Poke', poke);
     // console.log(poke.sprites && poke.sprites.other.dream_world.front_default);
     return (
       <>
@@ -67,4 +75,12 @@ class PokeDetails extends Component {
   }
 }
 
-export default PokeDetails;
+const mapStateToProps = state => ({
+  pokemon: getOnePokemon(state),
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+  fetchPokemon,
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(PokeDetails);

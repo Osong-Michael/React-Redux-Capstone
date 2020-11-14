@@ -1,4 +1,9 @@
-import { fetchPokemonsPending, fetchPokemonsSuccess, fetchPokemonsError } from './pokeActions';
+import {
+  fetchPokemonsPending,
+  fetchPokemonsSuccess,
+  fetchPokemonsError,
+  fetchOnePokemonSuccess,
+} from './pokeActions';
 
 function fetchPokemons() {
   return dispatch => {
@@ -18,4 +23,23 @@ function fetchPokemons() {
   };
 }
 
+function fetchPokemon(name) {
+  return dispatch => {
+    dispatch(fetchPokemonsPending());
+    fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+      .then(res => res.json())
+      .then(res => {
+        if (res.error) {
+          throw (res.error);
+        }
+        dispatch(fetchOnePokemonSuccess(res));
+        // console.log('From api', res);
+        return res;
+      })
+      .catch(error => {
+        dispatch(fetchPokemonsError(error));
+      });
+  };
+}
+export { fetchPokemon };
 export default fetchPokemons;

@@ -25,6 +25,17 @@ function filterPokemons(event) {
   };
 }
 
+function fetchOnePokemonSuccess(pokemon) {
+  return {
+    type: 'FETCH_POKEMON',
+    pokemon,
+  };
+}
+
 export {
-  fetchPokemonsPending, fetchPokemonsSuccess, fetchPokemonsError, filterPokemons,
+  fetchPokemonsPending,
+  fetchPokemonsSuccess,
+  fetchPokemonsError,
+  filterPokemons,
+  fetchOnePokemonSuccess,
 };

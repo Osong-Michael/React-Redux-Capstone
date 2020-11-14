@@ -55,7 +55,7 @@ class Pokemons extends Component {
       item.name.toLowerCase().search(filter.toLowerCase()) !== -1
     )) : pokemons;
     // eslint-disable-next-line react/prop-types
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div className={app.pokeBody}>
         <Pokemon pokemons={filteredPokemons} handleClick={this.handleClick} />
