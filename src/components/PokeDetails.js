@@ -6,9 +6,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { CircleLoader } from 'react-spinners';
 import details from '../css/Details.module.css';
 import { fetchPokemon } from '../actions/index';
-import { getOnePokemon } from '../reducers/pokeReducer';
+import { getOnePokemon, getPokemonPending } from '../reducers/pokeReducer';
 
 // const apiUrl = 'https://pokeapi.co/api/v2/pokemon';
 class PokeDetails extends Component {
@@ -46,10 +47,16 @@ class PokeDetails extends Component {
 
   render() {
     const poke = this.props.pokemon;
+    const { loading } = this.props;
     // console.log('My Poke', poke);
     // console.log(poke.sprites && poke.sprites.other.dream_world.front_default);
     return (
       <>
+        {loading && (
+          <div className={details.loading}>
+            <CircleLoader loading={loading} />
+          </div>
+        )}
         <div className={details.container}>
           <div className={details.image}>
             <img src={poke.sprites && poke.sprites.other.dream_world.front_default} alt="pokemon_img" />
@@ -77,6 +84,7 @@ class PokeDetails extends Component {
 
 const mapStateToProps = state => ({
   pokemon: getOnePokemon(state),
+  loading: getPokemonPending(state),
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

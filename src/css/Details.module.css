@@ -60,3 +60,23 @@ span {
 .back a:hover {
   text-decoration: underline;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #f3ecec;
+}
+
+.filter {
+  outline: none;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.filter::placeholder {
+  font-family: 'Lobster', cursive;
+}

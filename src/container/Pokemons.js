@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { CircleLoader } from 'react-spinners';
 import Pokemon from '../components/Pokemon';
 import app from '../css/App.module.css';
 import fetchPokemons from '../actions/index';
@@ -48,7 +49,7 @@ class Pokemons extends Component {
 
   render() {
     // eslint-disable-next-line react/prop-types
-    const { pokemons, filter } = this.props;
+    const { pokemons, filter, loading } = this.props;
     // eslint-disable-next-line react/prop-types
     const filteredPokemons = filter ? pokemons.filter(item => (
       // eslint-disable-next-line react/prop-types
@@ -57,9 +58,16 @@ class Pokemons extends Component {
     // eslint-disable-next-line react/prop-types
     // console.log(this.props);
     return (
-      <div className={app.pokeBody}>
-        <Pokemon pokemons={filteredPokemons} handleClick={this.handleClick} />
-      </div>
+      <>
+        {loading && (
+          <div className={app.loading}>
+            <CircleLoader loading={loading} />
+          </div>
+        )}
+        <div className={app.pokeBody}>
+          <Pokemon pokemons={filteredPokemons} handleClick={this.handleClick} />
+        </div>
+      </>
     );
   }
 }

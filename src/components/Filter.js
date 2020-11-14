@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { filterPokemons } from '../actions/pokeActions';
+import details from '../css/Details.module.css';
 
 const Filter = props => {
   // const [state, setState] = useState('');
@@ -17,7 +18,12 @@ const Filter = props => {
 
   return (
     <div>
-      <input type="text" onChange={handleChange} />
+      <input
+        type="text"
+        onChange={handleChange}
+        placeholder="Search Pokemon.."
+        className={details.filter}
+      />
     </div>
   );
 };

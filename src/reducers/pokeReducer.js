@@ -38,6 +38,7 @@ const pokeReducer = (state = initialState, action) => {
     case 'FETCH_POKEMON':
       return {
         ...state,
+        loading: false,
         pokemon: action.pokemon,
       };
     default:
