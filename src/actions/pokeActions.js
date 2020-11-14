@@ -18,4 +18,13 @@ function fetchPokemonsError(error) {
   };
 }
 
-export { fetchPokemonsPending, fetchPokemonsSuccess, fetchPokemonsError };
+function filterPokemons(event) {
+  return {
+    type: 'CHANGE_FILTER',
+    event,
+  };
+}
+
+export {
+  fetchPokemonsPending, fetchPokemonsSuccess, fetchPokemonsError, filterPokemons,
+};

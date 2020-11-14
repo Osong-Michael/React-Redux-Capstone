@@ -3,7 +3,7 @@ import { fetchPokemonsPending, fetchPokemonsSuccess, fetchPokemonsError } from '
 function fetchPokemons() {
   return dispatch => {
     dispatch(fetchPokemonsPending());
-    fetch('https://pokeapi.co/api/v2/pokemon')
+    fetch('https://pokeapi.co/api/v2/pokemon?offset=20&limit=30')
       .then(res => res.json())
       .then(res => {
         if (res.error) {
