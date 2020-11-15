@@ -6,6 +6,7 @@ A simple Calculator application built with React.
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fc95973a-54b6-426d-a797-a8ba36b2ea7b/deploy-status)](https://app.netlify.com/sites/oa7-pokemons/deploys)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -17,7 +18,7 @@ A simple Calculator application built with React.
   <h1 align="center">My Poke</h1>
 
   <p align="center">
-    <a href=""><strong>View Demo</strong></a>
+    <a href="https://oa7-pokemons.netlify.app/"><strong>View Demo</strong></a>
     ·
     <a href="https://github.com/OA7/React-Redux-Capstone/issues">Report Bug</a>
     ·
@@ -41,10 +42,11 @@ A simple Calculator application built with React.
 
 ## About The Project
 
-A simle catalaogue for your favourite pokemons.
+A simple catalaogue for your favourite pokemons.
 
 ![Product Name Screen Shot][product-screenshot]
 <br>
+![Product Name Screen Shot2][product-screenshot2]
 <br>
 <!-- ![Product Name Screen Shot][product-screenshot2] -->
 
@@ -102,7 +104,8 @@ This project was built using these technologies.
 [stars-url]: https://github.com/OA7/React-Redux-Capstone/stargazers
 [issues-shield]: https://img.shields.io/github/issues/OA7/React-Redux-Capstone.svg?style=flat-square
 [issues-url]: https://github.com/OA7/React-Redux-Capstone/issues
-[product-screenshot]: public/screen.png
+[product-screenshot]: public/screen1.png
+[product-screenshot2]: public/screen2.png
 <!-- [product-screenshot2]: dist/images/page2.png -->
 
 
