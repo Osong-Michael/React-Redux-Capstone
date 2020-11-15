@@ -8,7 +8,6 @@
 }
 
 .image {
-  /* border: 1px solid blue; */
   height: 200px;
   width: 75%;
   margin: 0 auto;
@@ -23,17 +22,14 @@
 }
 
 .name {
-  /* border: 1px solid blue; */
   text-align: center;
 }
 
 .height {
-  /* border: 1px solid blue; */
   text-align: center;
 }
 
 .abilities {
-  /* border: 1px solid blue; */
   display: flex;
   justify-content: space-around;
 }
@@ -46,7 +42,6 @@ span {
 }
 
 .back {
-  /* border: 1px solid blue; */
   width: 10%;
   margin: 0 auto;
   text-align: center;

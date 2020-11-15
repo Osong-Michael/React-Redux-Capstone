@@ -1,5 +1,4 @@
 .pokeBody {
-  /* border: 1px solid black; */
   width: 80%;
   margin: 150px auto;
   display: grid;
@@ -9,14 +8,12 @@
 }
 
 .poke {
-  /* border: 1px solid blue; */
   padding: 10px;
   height: 160px;
   position: relative;
   overflow: hidden;
   font-family: 'Lobster', cursive;
   text-transform: uppercase;
-  /* margin-top: 50px; */
 }
 
 .poke p {

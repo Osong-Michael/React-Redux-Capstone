@@ -1,9 +1,8 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { CircleLoader } from 'react-spinners';
+import PropTypes from 'prop-types';
 import Pokemon from '../components/Pokemon';
 import app from '../css/App.module.css';
 import fetchPokemons from '../actions/index';
@@ -13,20 +12,15 @@ import {
 
 class Pokemons extends Component {
   componentDidMount() {
-    // eslint-disable-next-line react/prop-types
     const { fetchPokemons } = this.props;
     fetchPokemons();
   }
 
   render() {
-    // eslint-disable-next-line react/prop-types
     const { pokemons, filter, loading } = this.props;
-    // eslint-disable-next-line react/prop-types
     const filteredPokemons = filter ? pokemons.filter(item => (
-      // eslint-disable-next-line react/prop-types
       item.name.toLowerCase().search(filter.toLowerCase()) !== -1
     )) : pokemons;
-    // eslint-disable-next-line react/prop-types
     return (
       <>
         {loading && (
@@ -41,6 +35,13 @@ class Pokemons extends Component {
     );
   }
 }
+
+Pokemons.propTypes = {
+  fetchPokemons: PropTypes.func.isRequired,
+  pokemons: PropTypes.arrayOf(PropTypes.object).isRequired,
+  filter: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
+};
 
 const mapStateToProps = state => ({
   error: getPokemonError(state),

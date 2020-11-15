@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import app from '../css/App.module.css';
 import Pokeball from '../img/pokeball.png';
 
-// eslint-disable-next-line react/prop-types
 const Pokemon = ({ pokemons }) => {
   const poke = pokemons.map(pokemon => (
     <div key={Math.random()} className={app.poke}>

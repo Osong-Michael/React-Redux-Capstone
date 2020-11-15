@@ -1,9 +1,9 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable prefer-destructuring */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { CircleLoader } from 'react-spinners';
@@ -14,13 +14,12 @@ import { getOnePokemon, getPokemonPending } from '../reducers/pokeReducer';
 class PokeDetails extends Component {
   componentDidMount() {
     const { fetchPokemon } = this.props;
-    this.name = this.props.match.params.name;
-    fetchPokemon(this.name);
+    const name = this.props.match.params.name;
+    fetchPokemon(name);
   }
 
   render() {
-    const poke = this.props.pokemon;
-    const { loading } = this.props;
+    const { pokemon, loading } = this.props;
     return (
       <>
         {loading && (
@@ -30,20 +29,20 @@ class PokeDetails extends Component {
         )}
         <div className={details.container}>
           <div className={details.image}>
-            <img src={poke.sprites && poke.sprites.other.dream_world.front_default} alt="pokemon_img" />
+            <img src={pokemon.sprites && pokemon.sprites.other.dream_world.front_default} alt="pokemon_img" />
           </div>
           <p className={details.name}>
             NAME:
-            <span>{poke.name}</span>
+            <span>{pokemon.name}</span>
           </p>
           <div className={details.height}>
             HEIGHT:
-            <span>{poke.height}</span>
+            <span>{pokemon.height}</span>
           </div>
           <div className={details.abilities}>
             <p>
               ABILITY:
-              <span>{poke.abilities && poke.abilities[0].ability.name}</span>
+              <span>{pokemon.abilities && pokemon.abilities[0].ability.name}</span>
             </p>
           </div>
         </div>
@@ -52,6 +51,11 @@ class PokeDetails extends Component {
     );
   }
 }
+
+PokeDetails.propTypes = {
+  fetchPokemon: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+};
 
 const mapStateToProps = state => ({
   pokemon: getOnePokemon(state),
