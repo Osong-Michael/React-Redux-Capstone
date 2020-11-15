@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import navbar from '../css/Navbar.module.css';
-import Filter from './Filter';
+import Filter from '../container/Filter';
 
 const Navbar = () => (
   <nav className={navbar.navbar}>
@@ -9,7 +9,6 @@ const Navbar = () => (
     <div className={navbar.right}>
       <div><Link to="/">All Pokemons</Link></div>
       <Filter />
-      {/* <div><Link to="/">Special Pokemons</Link></div> */}
     </div>
   </nav>
 );

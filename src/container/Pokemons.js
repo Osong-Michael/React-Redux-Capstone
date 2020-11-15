@@ -11,41 +11,12 @@ import {
   getPokemonError, getPokemon, getPokemonPending, filterPokemonsName,
 } from '../reducers/pokeReducer';
 
-// const apiUrl = 'https://pokeapi.co/api/v2/pokemon';
 class Pokemons extends Component {
-  // constructor(props) {
-  //   super(props);
-
-  //   // this.state = {
-  //   //   pokemons: [],
-  //   // };
-  // }
-
   componentDidMount() {
-    // this.getPoke();
     // eslint-disable-next-line react/prop-types
     const { fetchPokemons } = this.props;
     fetchPokemons();
   }
-
-  // getPoke() {
-  //   fetch(apiUrl)
-  //     .then(res => res.json())
-  //     .then(resItems => {
-  //       this.setState({
-  //         pokemons: resItems.results,
-  //       });
-  //     });
-  // }
-
-  // filterList = e => {
-  //   const updatedList = this.state.sourceData.filter(item => {
-  //     return (
-  //       item.continent.toLowerCase().search(e.target.value.toLowerCase()) !== -1
-  //     );
-  //   });
-  //   this.setState({ filterData: updatedList });
-  // };
 
   render() {
     // eslint-disable-next-line react/prop-types
@@ -56,7 +27,6 @@ class Pokemons extends Component {
       item.name.toLowerCase().search(filter.toLowerCase()) !== -1
     )) : pokemons;
     // eslint-disable-next-line react/prop-types
-    // console.log(this.props);
     return (
       <>
         {loading && (

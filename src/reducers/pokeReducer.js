@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 const initialState = {
   loading: false,
   pokemons: [],
@@ -8,10 +7,6 @@ const initialState = {
 };
 
 const pokeReducer = (state = initialState, action) => {
-  // const list = state.pokemons.length ? state : 'No pokemons';
-  // console.log(action);
-  // console.log('List', list);
-  // console.log('State', state);
   switch (action.type) {
     case 'FETCHING_POKEMONS':
       return {

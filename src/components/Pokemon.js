@@ -6,11 +6,6 @@ import Pokeball from '../img/pokeball.png';
 
 // eslint-disable-next-line react/prop-types
 const Pokemon = ({ pokemons }) => {
-  // console.log(pokemons);
-  // const myClick = () => {
-  //   console.log('Click');
-  // };
-
   const poke = pokemons.map(pokemon => (
     <div key={Math.random()} className={app.poke}>
       <p>{pokemon.name}</p>
@@ -31,9 +26,7 @@ const Pokemon = ({ pokemons }) => {
 };
 
 Pokemon.propTypes = {
-
   pokemons: PropTypes.arrayOf(PropTypes.object).isRequired,
-
 };
 
 export default Pokemon;

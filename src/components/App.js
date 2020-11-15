@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Pokemons from '../container/Pokemons';
 import Navbar from './Navbar';
-import PokeDetails from './PokeDetails';
+import PokeDetails from '../container/PokeDetails';
 
 function App() {
   return (

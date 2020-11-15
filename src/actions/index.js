@@ -33,7 +33,6 @@ function fetchPokemon(name) {
           throw (res.error);
         }
         dispatch(fetchOnePokemonSuccess(res));
-        // console.log('From api', res);
         return res;
       })
       .catch(error => {
