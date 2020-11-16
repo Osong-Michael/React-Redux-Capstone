@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { filterPokemons } from '../actions/pokeActions';
+import { filterPokemons } from '../actions/index';
 import details from '../css/Details.module.css';
 
 const Filter = props => {

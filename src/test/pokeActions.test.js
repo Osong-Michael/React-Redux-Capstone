@@ -5,7 +5,7 @@ import {
   filterPokemons,
   fetchOnePokemonSuccess,
 }
-  from '../actions/pokeActions';
+  from '../actions/index';
 
 describe('actions', () => {
   it('should create an action to start fetching Pokemons', () => {

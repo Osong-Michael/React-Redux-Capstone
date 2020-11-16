@@ -5,7 +5,7 @@ import { CircleLoader } from 'react-spinners';
 import PropTypes from 'prop-types';
 import Pokemon from '../components/Pokemon';
 import app from '../css/App.module.css';
-import fetchPokemons from '../actions/index';
+import fetchPokemons from '../actions/pokeActions';
 import {
   getPokemonError, getPokemon, getPokemonPending, filterPokemonsName,
 } from '../reducers/pokeReducer';

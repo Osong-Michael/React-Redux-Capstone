@@ -1,44 +1,41 @@
-import {
+function fetchPokemonsPending() {
+  return {
+    type: 'FETCHING_POKEMONS',
+  };
+}
+
+function fetchPokemonsSuccess(pokemons) {
+  return {
+    type: 'FETCHED_POKEMONS',
+    pokemons,
+  };
+}
+
+function fetchPokemonsError(error) {
+  return {
+    type: 'FETCHING_POKEMONS_FAILED',
+    error,
+  };
+}
+
+function filterPokemons(event) {
+  return {
+    type: 'CHANGE_FILTER',
+    event,
+  };
+}
+
+function fetchOnePokemonSuccess(pokemon) {
+  return {
+    type: 'FETCH_POKEMON',
+    pokemon,
+  };
+}
+
+export {
   fetchPokemonsPending,
   fetchPokemonsSuccess,
   fetchPokemonsError,
+  filterPokemons,
   fetchOnePokemonSuccess,
-} from './pokeActions';
-
-function fetchPokemons() {
-  return dispatch => {
-    dispatch(fetchPokemonsPending());
-    fetch('https://pokeapi.co/api/v2/pokemon?offset=20&limit=30')
-      .then(res => res.json())
-      .then(res => {
-        if (res.error) {
-          throw (res.error);
-        }
-        dispatch(fetchPokemonsSuccess(res.results));
-        return res.results;
-      })
-      .catch(error => {
-        dispatch(fetchPokemonsError(error));
-      });
-  };
-}
-
-function fetchPokemon(name) {
-  return dispatch => {
-    dispatch(fetchPokemonsPending());
-    fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-      .then(res => res.json())
-      .then(res => {
-        if (res.error) {
-          throw (res.error);
-        }
-        dispatch(fetchOnePokemonSuccess(res));
-        return res;
-      })
-      .catch(error => {
-        dispatch(fetchPokemonsError(error));
-      });
-  };
-}
-export { fetchPokemon };
-export default fetchPokemons;
+};

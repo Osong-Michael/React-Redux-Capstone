@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { CircleLoader } from 'react-spinners';
 import details from '../css/Details.module.css';
-import { fetchPokemon } from '../actions/index';
+import { fetchPokemon } from '../actions/pokeActions';
 import { getOnePokemon, getPokemonPending } from '../reducers/pokeReducer';
 
 class PokeDetails extends Component {
