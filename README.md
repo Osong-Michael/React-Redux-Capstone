@@ -1,6 +1,6 @@
 # React and Redux App
 
-A simple Calculator application built with React.
+A simple catalogue for your best Pokemons.
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
