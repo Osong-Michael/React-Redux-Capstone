@@ -65,7 +65,8 @@ To use this app locally, this is what you need to:
     https://github.com/OA7/React-Redux-Capstone.git
   ```
 * `cd` into the downloaded folder and run `npm install`
-* then, run `npm start`.
+* Run `npm run test` to see all tests for this app.
+* then, run `npm start` to start the development server.
 
 ### Built With
 This project was built using these technologies.
