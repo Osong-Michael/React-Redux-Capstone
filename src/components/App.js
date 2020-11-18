@@ -1,3 +1,4 @@
+/* eslint linebreak-style: [2, "windows"] */
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Pokemons from '../container/Pokemons';

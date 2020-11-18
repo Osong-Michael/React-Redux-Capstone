@@ -1,3 +1,4 @@
+/* eslint linebreak-style: [2, "windows"] */
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';

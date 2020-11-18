@@ -1,3 +1,4 @@
+/* eslint linebreak-style: [2, "windows"] */
 function fetchPokemonsPending() {
   return {
     type: 'FETCHING_POKEMONS',

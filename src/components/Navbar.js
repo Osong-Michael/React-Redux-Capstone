@@ -1,3 +1,4 @@
+/* eslint linebreak-style: [2, "windows"] */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import navbar from '../css/Navbar.module.css';

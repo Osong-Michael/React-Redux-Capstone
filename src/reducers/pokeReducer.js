@@ -1,3 +1,4 @@
+/* eslint linebreak-style: [2, "windows"] */
 const initialState = {
   loading: false,
   pokemons: [],

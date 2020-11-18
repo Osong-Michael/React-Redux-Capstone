@@ -1,3 +1,4 @@
+/* eslint linebreak-style: [2, "windows"] */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable prefer-destructuring */
