@@ -1,28 +1,42 @@
 /* eslint linebreak-style: [2, "windows"] */
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import fetchPokemons from '../actions/pokeActions';
-import { fetchPokemonsPending } from '../actions/index';
+import fetchPokemons, { fetchPokemon } from '../actions/pokeActions';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 let store;
 const state = {
   pokemons: [],
+  pokemon: {},
 };
 
-describe('User Actions', () => {
+describe('API Calls', () => {
   beforeEach(() => {
     store = mockStore(state);
   });
 
-  describe('Getting all Pokemons', () => {
-    it('It dispatches the fetching pokemons pending action', () => {
-      fetchPokemons();
-      store.dispatch(fetchPokemonsPending());
-      const actions = store.getActions();
+  describe('Calling API for All Pokemons and One Pokemon', () => {
+    it('Getting One Pokemon', () => {
+      store.dispatch(fetchPokemon());
+      const expected = {
+        pokemons: [],
+        pokemon: {},
+      };
+      const actions = store.getState();
 
-      expect(actions[0].type).toEqual('FETCHING_POKEMONS');
+      expect(actions).toEqual(expected);
+    });
+
+    it('It gets all pokemons in the state', () => {
+      store.dispatch(fetchPokemons());
+      const expected = {
+        pokemons: [],
+        pokemon: {},
+      };
+      const actions = store.getState();
+
+      expect(actions).toEqual(expected);
     });
   });
 });
