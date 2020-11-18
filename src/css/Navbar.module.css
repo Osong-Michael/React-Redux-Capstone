@@ -1,0 +1,36 @@
+.navbar {
+  padding: 5px;
+  font-family: 'Lobster', cursive;
+  background-color: #e81c45;
+  position: relative;
+  height: 100px;
+}
+
+.navbar h1 {
+  font-size: 50px;
+  color: white;
+  padding-left: 100px;
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  position: absolute;
+  right: 130px;
+  top: 65px;
+}
+
+.right a {
+  color: white;
+  text-decoration: none;
+}
+
+/* stylelint-disable */
+.navbar {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  margin-top: -150px;
+}
+/* stylelint-enable */

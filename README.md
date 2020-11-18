@@ -1,11 +1,12 @@
 # React and Redux App
 
-A simple Calculator application built with React.
+A simple catalogue for your best Pokemons.
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fc95973a-54b6-426d-a797-a8ba36b2ea7b/deploy-status)](https://app.netlify.com/sites/oa7-pokemons/deploys)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -17,7 +18,7 @@ A simple Calculator application built with React.
   <h1 align="center">My Poke</h1>
 
   <p align="center">
-    <a href=""><strong>View Demo</strong></a>
+    <a href="https://oa7-pokemons.netlify.app/"><strong>View Demo</strong></a>
     ·
     <a href="https://github.com/OA7/React-Redux-Capstone/issues">Report Bug</a>
     ·
@@ -41,10 +42,11 @@ A simple Calculator application built with React.
 
 ## About The Project
 
-A simle catalaogue for your favourite pokemons.
+A simple catalaogue for your favourite pokemons.
 
 ![Product Name Screen Shot][product-screenshot]
 <br>
+![Product Name Screen Shot2][product-screenshot2]
 <br>
 <!-- ![Product Name Screen Shot][product-screenshot2] -->
 
@@ -63,7 +65,8 @@ To use this app locally, this is what you need to:
     https://github.com/OA7/React-Redux-Capstone.git
   ```
 * `cd` into the downloaded folder and run `npm install`
-* then, run `npm start`.
+* Run `npm run test` to see all tests for this app.
+* then, run `npm start` to start the development server.
 
 ### Built With
 This project was built using these technologies.
@@ -102,7 +105,8 @@ This project was built using these technologies.
 [stars-url]: https://github.com/OA7/React-Redux-Capstone/stargazers
 [issues-shield]: https://img.shields.io/github/issues/OA7/React-Redux-Capstone.svg?style=flat-square
 [issues-url]: https://github.com/OA7/React-Redux-Capstone/issues
-[product-screenshot]: public/screen.png
+[product-screenshot]: public/screen1.png
+[product-screenshot2]: public/screen2.png
 <!-- [product-screenshot2]: dist/images/page2.png -->
 
 
