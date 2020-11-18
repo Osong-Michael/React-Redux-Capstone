@@ -1,4 +1,3 @@
-/* eslint linebreak-style: [2, "windows"] */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { applyMiddleware, createStore } from 'redux';
